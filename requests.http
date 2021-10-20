@@ -2,12 +2,32 @@ GET http://localhost:3000/contacts
 
 ###
 POST http://localhost:3000/contacts
+content-type: application/json
+
+{
+  "first_name": "Stassie",
+  "last_name": "Shimizu", 
+  "email": "stassie.shimizu@gmail.com",
+  "phone_number": "1234567890",
+  "latitude": 123.34,
+  "longitude": 567.89
+}
 
 ###
-GET http://localhost:3000/contacts/1
+GET http://localhost:3000/contacts/52
 
 ###
-PATCH http://localhost:3000/contacts/1
+PATCH http://localhost:3000/contacts/50
+content-type: application/json
+
+{
+  "first_name": "Stassie",
+  "last_name": "Shimizu", 
+  "email": "stassie.shimizu@gmail.com",
+  "phone_number": "1234567890",
+  "latitude": 123.34,
+  "longitude": 567.89
+}
 
 ###
-DELETE http://localhost:3000/contacts/1
+DELETE http://localhost:3000/contacts/50

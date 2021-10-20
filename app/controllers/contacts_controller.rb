@@ -5,18 +5,39 @@ class ContactsController < ApplicationController
   end
 
   def create
-    render json: {message: 2}
+    contact = Contact.new(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone_number: params[:phone_number],
+      longitude: params[:longitude],
+      latitude: params[:latitude]
+    )
+    contact.save
+    render json: contact
   end
 
   def show
-    render json: {message: 3}
+    contact = Contact.find_by(id: params[:id])
+    render json: contact
   end
 
   def update
-    render json: {message: 4}
+    contact = Contact.find_by(id: params[:id])
+    contact.first_name = params[:first_name]
+    contact.last_name = params[:last_name]
+    contact.email = params[:email]
+    contact.phone_number = params[:phone_number]
+    contact.latitude = params[:latitude]
+    contact.longitude = params[:longitude]
+    contact.save
+    render json: contact
   end
 
   def destroy 
-    render json: {message: 5}
+    contact = Contact.find_by(id: params[:id])
+    contact.destroy
+    message = "Successfully deleted contact."
+    render json: message
   end
 end
