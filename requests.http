@@ -9,8 +9,7 @@ content-type: application/json
   "last_name": "Shimizu", 
   "email": "stassie.shimizu@gmail.com",
   "phone_number": "1234567890",
-  "latitude": 123.34,
-  "longitude": 567.89
+  "address": "Las Vegas"
 }
 
 ###
@@ -25,8 +24,7 @@ content-type: application/json
   "last_name": "Shimizu", 
   "email": "stassie.shimizu@gmail.com",
   "phone_number": "1234567890",
-  "latitude": 123.34,
-  "longitude": 567.89
+  "address": "Las Vegas"
 }
 
 ###

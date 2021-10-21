@@ -10,8 +10,7 @@ class ContactsController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       phone_number: params[:phone_number],
-      longitude: params[:longitude],
-      latitude: params[:latitude]
+      address: params[:address]
     )
     contact.save
     render json: contact
@@ -28,8 +27,7 @@ class ContactsController < ApplicationController
     contact.last_name = params[:last_name]
     contact.email = params[:email]
     contact.phone_number = params[:phone_number]
-    contact.latitude = params[:latitude]
-    contact.longitude = params[:longitude]
+    contact.address = params[:address]
     contact.save
     render json: contact
   end
