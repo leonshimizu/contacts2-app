@@ -5,12 +5,11 @@ POST http://localhost:3000/contacts
 content-type: application/json
 
 {
-  "first_name": "Stassie",
+  "first_name": "Leon",
   "last_name": "Shimizu", 
-  "email": "stassie.shimizu@gmail.com",
+  "email": "lmshimizu@gmail.com",
   "phone_number": "1234567890",
-  "latitude": 50.5,
-  "longitude": 20.8
+  "address": "Sinajana GU"
 }
 
 ###

@@ -5,15 +5,17 @@ class ContactsController < ApplicationController
   end
 
   def create
-    # address = params[:address]
+    results = Geocoder.search(params[:address])
+    geo_latitude = results.first.coordinates[0]
+    geo_longitude = results.first.coordinates[1]
 
     contact = Contact.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
       phone_number: params[:phone_number],
-      latitude: params[:latitude],
-      longitude: params[:longitude]
+      latitude: geo_latitude,
+      longitude: geo_longitude
     )
     contact.save
     render json: contact
