@@ -4,8 +4,12 @@ class Contact < ApplicationRecord
   end
 
   def address
-    results = Geocoder.search([latitude, longitude])
-    geo_address = results.first.address
-    return geo_address
+    if latitude 
+      results = Geocoder.search([latitude, longitude])
+      geo_address = results.first.address
+      return geo_address
+    else
+      return nil
+    end
   end
 end
