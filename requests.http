@@ -9,22 +9,24 @@ content-type: application/json
   "last_name": "Shimizu", 
   "email": "stassie.shimizu@gmail.com",
   "phone_number": "1234567890",
-  "address": "Las Vegas"
+  "latitude": 50.5,
+  "longitude": 20.8
 }
 
 ###
 GET http://localhost:3000/contacts/52
 
 ###
-PATCH http://localhost:3000/contacts/50
+PATCH http://localhost:3000/contacts/54
 content-type: application/json
 
 {
-  "first_name": "Stassie",
+  "first_name": "Anastasia",
   "last_name": "Shimizu", 
   "email": "stassie.shimizu@gmail.com",
   "phone_number": "1234567890",
-  "address": "Las Vegas"
+  "latitude": 50.5,
+  "longitude": 20.8
 }
 
 ###
