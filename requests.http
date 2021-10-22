@@ -9,7 +9,7 @@ content-type: application/json
   "last_name": "Shimizu", 
   "email": "lmshimizu@gmail.com",
   "phone_number": "1234567890",
-  "address": "Sinajana GU"
+  "address": "Meadville PA"
 }
 
 ###
@@ -24,8 +24,7 @@ content-type: application/json
   "last_name": "Shimizu", 
   "email": "stassie.shimizu@gmail.com",
   "phone_number": "1234567890",
-  "latitude": 50.5,
-  "longitude": 20.8
+  "address": "Seattle, WA"
 }
 
 ###

@@ -27,13 +27,17 @@ class ContactsController < ApplicationController
   end
 
   def update
+    results = Geocoder.search(params[:address])
+    geo_latitude = results.first.coordinates[0]
+    geo_longitude = results.first.coordinates[1]
+
     contact = Contact.find_by(id: params[:id])
     contact.first_name = params[:first_name] || contact.first_name
     contact.last_name = params[:last_name] || contact.last_name
     contact.email = params[:email] || contact.email
     contact.phone_number = params[:phone_number] || contact.phone_number
-    contact.latitude = params[:latitude] || contact.latitude
-    contact.longitude = params[:longitude] || contact.longitude
+    contact.latitude = geo_latitude || contact.latitude
+    contact.longitude = geo_longitude || contact.longitude
     contact.save
     render json: contact
   end
